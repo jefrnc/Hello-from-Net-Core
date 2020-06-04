@@ -4,17 +4,19 @@
     ViewData["Title"] = "Home page";
 }
 
- 
 
- 
-    <section class="content show" id="home">
-        <h1>Bienvenido!</h1>
-        <h5>Soy el pod <strong>sasas</strong></h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vulputate arcu sit amet sem venenatis dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse eu massa sed orci interdum lobortis. Vivamus rutrum.</p>
-        <p><a href="/vars">Ver variables de entorno &#187;</a></p>
-    </section>
-
- 
 
 
  
+  
+
+<section class="content show" id="home">
+    <h1>Bienvenido!</h1>
+    <h5>Soy el pod <strong>@{ Write(Environment.GetEnvironmentVariable("HOSTNAME")); }</strong></h5>
+    <p>Puedes clonar este repositorio en https://github.com/jefrnc/Hello-from-Net-Core.</p>
+    <p><a href="/vars">Ver variables de entorno &#187;</a></p>
+</section>
+
+
+
+
