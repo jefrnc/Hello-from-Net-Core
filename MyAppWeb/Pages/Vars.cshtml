@@ -4,21 +4,21 @@
     ViewData["Title"] = "Variables";
 }
 
- 
+
 <section class="content show" id="home">
     <h1>Variables</h1>
     <h5>Estas fueron cargadas automaticamente en el pod.</h5>
 
 
-    @{ 
+    @{
 
         // get all
         var enumerator = Environment.GetEnvironmentVariables().GetEnumerator();
         while (enumerator.MoveNext())
         {
             <p> <b>@{ Write(enumerator.Key); }</b> : @{ Write(enumerator.Value.ToString()); } </p>
-                    }
-                }
-    <p>Nullam quis arcu a elit feugiat congue nec non orci. Pellentesque feugiat bibendum placerat. Nullam eu massa in ipsum varius laoreet. Ut tristique pretium egestas. Sed sed velit dolor. Nam rhoncus euismod lorem, id placerat ipsum placerat nec. Mauris ut eros a ligula tristique lacinia non blandit metus. Sed vitae velit lorem, et scelerisque diam.</p>
+        }
+    }
+
     <p><a href="/">Volver</a></p>
 </section>
